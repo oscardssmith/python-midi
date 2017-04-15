@@ -3,7 +3,7 @@ def read_varlen(data):
     NEXTBYTE = 1
     value = 0
     while NEXTBYTE:
-        chr = ord(data.next())
+        chr = ord(six.advance_iterator(data))
         # is the hi-bit set?
         if not (chr & 0x80):
             # no next BYTE

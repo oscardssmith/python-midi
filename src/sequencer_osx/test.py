@@ -4,6 +4,6 @@ client = sequencer_osx._MIDIClientCreate("python")
 endpoint = sequencer_osx._MIDISourceCreate(client, "python-source")
 port = sequencer_osx._MIDIOutputPortCreate(client, "python-port")
 sequencer_osx._MIDIPortConnectSource(port, endpoint)
-print client, endpoint, endpoint
-raw_input()
+print(client, endpoint, endpoint)
+six.input()
 #sequencer_osx._MIDIClientDispose(handle)
